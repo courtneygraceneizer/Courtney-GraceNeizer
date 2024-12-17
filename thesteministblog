@@ -1,115 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The STEMinist Blog</title>
     <style>
       body {
-        margin: 0;
         font-family: 'Times New Roman', serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
-      }
-      .container {
-        display: flex;
-      }
-      .sidebar {
-        background-color: #d9c7b6;
-        width: 250px;
-        height: 100vh;
-        padding: 20px;
         text-align: center;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2,
-      .sidebar h3 {
         margin: 0;
       }
-      .sidebar a {
-        display: block;
-        margin: 15px 0;
-        color: #dda448;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .sidebar a:hover {
-        text-decoration: underline;
-      }
-      .content {
-        flex: 1;
-        padding: 30px;
-        text-align: justify;
-      }
       iframe {
-        width: 100%;
-        height: 600px;
         border: none;
+        width: 80%;
+        height: 500px;
         margin-top: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-      a {
-        text-decoration: underline;
-        color: black; /* Black clickable link */
-      }
-      .footer {
-        font-size: 14px;
-        margin-top: 50px;
-        color: #4a4a4a;
-      }
-      .contact-info {
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        text-align: right;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
-        <a href="index.html">Home</a>
-        <a href="steministblog.html">The STEMinist Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="#">Articles/Talks</a>
-        <a href="#">CV</a>
-      </div>
-
-      <!-- STEMinist Blog Content -->
-      <div class="content">
-        <h1>The STEMinist Blog</h1>
-        <p>
-          Welcome to <b>The STEMinist Blog</b>, a platform dedicated to promoting cross-cultural exchanges and empowering young girls and women in STEM. This page offers science posts, career advice, and engaging content to inspire the next generation of women in science and technology.
-        </p>
-        <p>
-          You can explore the full page by clicking <a href="https://www.instagram.com/thesteministblog/" target="_blank">here</a>.
-        </p>
-
-        <!-- Instagram Preview -->
-        <iframe
-          src="https://www.instagram.com/thesteministblog/embed/"
-          title="The STEMinist Blog Preview"
-        ></iframe>
-
-        <div class="footer">
-          <p>Last updated: December 2024</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <p>Email: cneizer@charlotte.edu</p>
-      <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
-    </div>
+    <h1>The STEMinist Blog</h1>
+    <p>Preview of our Instagram page below:</p>
+    <iframe src="https://www.instagram.com/thesteministblog/embed" title="The STEMinist Blog"></iframe>
+    <p>
+      Visit the full page: 
+      <a href="https://www.instagram.com/thesteministblog/" target="_blank">The STEMinist Blog</a>
+    </p>
   </body>
 </html>
+
