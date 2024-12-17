@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications</title>
     <style>
-      /* Same CSS as above */
+      /* General Styles */
       body {
         margin: 0;
         font-family: "Times New Roman", serif;
@@ -15,13 +15,34 @@
       .container {
         display: flex;
       }
+      /* Sidebar Styles */
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
         height: 100vh;
         padding: 20px;
         text-align: center;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .sidebar img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+      }
+      .sidebar h2,
+      .sidebar h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .sidebar h3 {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #4a4a4a;
       }
       .sidebar a {
         display: block;
@@ -30,15 +51,21 @@
         text-decoration: none;
         font-weight: bold;
       }
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+      /* Content Styles */
       .content {
         flex: 1;
-        margin-left: 270px;
+        margin-left: 270px; /* Align content beside sidebar */
         padding: 30px;
+        text-align: justify;
       }
       .content a {
         text-decoration: underline;
-        color: black;
+        color: black; /* Black links */
       }
+      /* Footer and Contact Styles */
       .footer {
         font-size: 14px;
         color: #4a4a4a;
@@ -49,10 +76,16 @@
         font-size: 14px;
         margin-right: 20px;
       }
+      .contact-info a {
+        color: black;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
+    <!-- Main Container -->
     <div class="container">
+      <!-- Sidebar -->
       <div class="sidebar">
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
@@ -72,8 +105,7 @@
           <a
             href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15"
             target="_blank"
-            >"Species Biodiversity Utilizing eDNA Analysis in Mill Branch
-            Creek"</a
+            >"Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"</a
           >
           <br />
           Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda
@@ -82,26 +114,34 @@
           <details>
             <summary><b>▼ Abstract (click to expand)</b></summary>
             Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
-environmental materials from different organisms. We use graph analysis to examine trends in species
-diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
-amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
-of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
-following this construction. The family and species number of Homo Sapiens, often known as humans,
-were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
-fundamental local alignment search method that identifies areas of local sequence similarity. The most
-common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial
-species, usually present in meat. Additional eDNA samples collected were stored in a deep freezer for
-downstream laboratory analyses allowing further investigation of Mill Branch Creek in the future. 
+            environmental materials from different organisms. We use graph analysis to examine trends in species
+            diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
+            amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
+            of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
+            following this construction. The family and species number of Homo sapiens, often known as humans,
+            were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
+            fundamental local alignment search method that identifies areas of local sequence similarity. The most
+            common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
+            usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
+            laboratory analyses allowing further investigation of Mill Branch Creek in the future.
           </details>
         </p>
+        <!-- Footer -->
         <div class="footer">
-          <p>Last updated: December 2024</p>
           <div class="contact-info">
-            <p>Email: cneizer@charlotte.edu | GitHub: <a href="https://github.com/cgrezien" target="_blank"><u>cgrezien</u></a></p>
+            <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
+            <p>
+              GitHub:
+              <a href="https://github.com/cgrezien" style="color: black">cgrezien</a>
+            </p>
           </div>
+          <p>Last updated: December 2024</p>
         </div>
       </div>
     </div>
+  </body>
+</html>
+
   </body>
 </html>
 
