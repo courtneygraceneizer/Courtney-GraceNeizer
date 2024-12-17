@@ -13,22 +13,13 @@
       }
       .container {
         display: flex;
+        min-height: 100vh;
       }
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
-        height: 100vh;
         padding: 20px;
         text-align: center;
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2,
-      .sidebar h3 {
-        margin: 0;
       }
       .sidebar a {
         display: block;
@@ -37,20 +28,18 @@
         text-decoration: none;
         font-weight: bold;
       }
-      a {
-        text-decoration: underline;
-        color: black;
-      }
       .content {
         flex: 1;
         padding: 30px;
       }
-      .footer {
-        font-size: 14px;
-        margin-top: 50px;
+      summary {
+        font-weight: bold;
+        cursor: pointer;
       }
-      details {
-        margin-top: 10px;
+      .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        text-align: right;
       }
     </style>
   </head>
@@ -58,47 +47,37 @@
     <div class="container">
       <!-- Sidebar -->
       <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
         <a href="index.html">Home</a>
-        <a href="https://www.instagram.com/thesteministblog/">The STEMinist Blog</a>
+        <a href="steminstblog.html">The STEMinist Blog</a>
         <a href="publications.html">Publications</a>
         <a href="#">Articles/Talks</a>
         <a href="#">CV</a>
       </div>
 
-      <!-- Publications Content -->
+      <!-- Content -->
       <div class="content">
         <h2>Recent Publications</h2>
         <h3>First Author</h3>
         <p>
-          <a
-            href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15"
+          <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank"
             >"Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"</a
           >
           <br />Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda
         </p>
         <details>
-          <summary><b>▼ Abstract (click to expand)</b></summary>
+          <summary>► Abstract (click to expand)</summary>
           <p>
-            Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
-environmental materials from different organisms. We use graph analysis to examine trends in species
-diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
-amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
-of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
-following this construction. The family and species number of Homo Sapiens, often known as humans,
-were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
-fundamental local alignment search method that identifies areas of local sequence similarity. The most
-common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial
-species, usually present in meat. Additional eDNA samples collected were stored in a deep freezer for
-downstream laboratory analyses allowing further investigation of Mill Branch Creek in the future. 
+            This research paper highlights the inspiring journey of Dr. Hayat Sindi as an example of how great an impact a role model can have in education and personal growth...
           </p>
         </details>
+
+        <!-- Footer -->
         <div class="footer">
+          <p>Email: cneizer@charlotte.edu | GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
           <p>Last updated: December 2024</p>
         </div>
       </div>
     </div>
   </body>
 </html>
+
