@@ -28,18 +28,21 @@
         height: 120px;
         margin-bottom: 10px;
       }
-      .sidebar h2, .sidebar h3 {
+      .sidebar h2,
+      .sidebar h3 {
         margin: 0;
+        font-size: 18px;
+        font-weight: bold;
       }
       .sidebar h3 {
         font-size: 14px;
-        color: #4a4a4a;
         margin-top: 5px;
+        color: #4a4a4a;
       }
       .sidebar a {
         display: block;
-        margin: 10px 0;
-        color: #cc9e5b;
+        margin: 15px 0;
+        color: #dda448;
         text-decoration: none;
         font-weight: bold;
       }
@@ -58,19 +61,37 @@
         text-decoration: underline;
         color: #8b5e3c;
       }
+      .content a:visited {
+        color: black;
+      }
       .footer {
         font-size: 14px;
         color: #4a4a4a;
+        margin-top: 50px;
       }
       .contact-info {
-        position: absolute;
-        bottom: 10px;
+        position: fixed;
+        bottom: 20px;
         right: 30px;
-        font-size: 14px;
         text-align: right;
-        color: black;
+        font-size: 14px;
+      }
+      .abstract {
+        display: none;
+        margin-top: 10px;
+      }
+      .toggle {
+        cursor: pointer;
+        color: #8b5e3c;
+        font-weight: bold;
       }
     </style>
+    <script>
+      function toggleAbstract() {
+        const abstract = document.getElementById('abstract');
+        abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -88,30 +109,42 @@
 
       <!-- Content -->
       <div class="content">
+        <h2>Recent Publications</h2>
+        <h3>First Author</h3>
         <p>
-          Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
-          University of North Carolina at Charlotte with a concentration in
-          bioinformatics. I am passionate about empowering others through
-          technology and education. I run <b>The STEMinist Blog</b>, a platform
-          for young girls and women in STEM, promoting cross-cultural exchanges
-          and empowering young girls in STEM. With contributions from
-          female-identifying Ph.D., medical, and undergraduate students in STEM,
-          The STEMinist Blog offers science posts, career advice, and vlogs to
-          support the next generation of women in science and technology.
+          <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank">
+            <u>"Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"</u>
+          </a>
+          <br />
+          Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda
         </p>
+        <p class="toggle" onclick="toggleAbstract()">
+          ▼ Abstract (click to expand)
+        </p>
+        <div id="abstract" class="abstract">
+          <p>
+            This research paper highlights the inspiring journey of Dr. Hayat Sindi as an example of how great an
+            impact a role model can have in the scope of education and personal growth. This research examines the
+            structural components of Dr. Hayat Sindi’s life, through a narrative analysis approach. Different online
+            sources, including websites, interviews, databases, and talks are studied to emphasize the legacy of Dr.
+            Hayat Sindi’s journey in shaping educational narratives and aspirations for the advancement of society,
+            showcasing the broader importance of such role models in inspiring future generations.
+          </p>
+        </div>
         <div class="footer">
           <p>Last updated: December 2024</p>
         </div>
       </div>
+    </div>
 
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <p>Email: cneizer@charlotte.edu</p>
-        <p>GitHub: <a href="https://github.com/cgrezien" style="color: black">cgrezien</a></p>
-      </div>
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p>Email: cneizer@charlotte.edu</p>
+      <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
     </div>
   </body>
 </html>
+
 
 
 
