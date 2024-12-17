@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The STEMinist Blog</title>
     <style>
       body {
+        margin: 0;
         font-family: 'Times New Roman', serif;
+        text-align: center;
         background-color: #f9f5f2;
         color: #4a4a4a;
-        text-align: center;
-        margin: 0;
       }
       iframe {
-        border: none;
         width: 80%;
         height: 500px;
-        margin-top: 20px;
+        border: none;
+        margin: 20px 0;
+      }
+      a {
+        text-decoration: underline;
+        color: black;
       }
     </style>
   </head>
   <body>
     <h1>The STEMinist Blog</h1>
-    <p>Preview of our Instagram page below:</p>
-    <iframe src="https://www.instagram.com/thesteministblog/embed" title="The STEMinist Blog"></iframe>
+    <p>Preview our Instagram page below:</p>
+    <iframe src="https://www.instagram.com/thesteministblog/embed"></iframe>
     <p>
-      Visit the full page: 
-      <a href="https://www.instagram.com/thesteministblog/" target="_blank">The STEMinist Blog</a>
+      Visit the full page: <a href="https://www.instagram.com/thesteministblog/" target="_blank">The STEMinist Blog</a>
     </p>
   </body>
 </html>
+
 
