@@ -28,21 +28,26 @@
         height: 120px;
         margin-bottom: 10px;
       }
-      .sidebar h2 {
-        font-size: 20px;
+      .sidebar h2,
+      .sidebar h3 {
         margin: 0;
+        font-size: 18px;
+        font-weight: bold;
       }
       .sidebar h3 {
         font-size: 14px;
-        color: #4a4a4a;
         margin-top: 5px;
+        color: #4a4a4a;
       }
       .sidebar a {
         display: block;
-        margin: 10px 0;
-        color: #d9c7b6;
+        margin: 15px 0;
+        color: #dda448;
         text-decoration: none;
         font-weight: bold;
+      }
+      .sidebar a:hover {
+        text-decoration: underline;
       }
       .content {
         flex: 1;
@@ -59,18 +64,20 @@
       .footer {
         font-size: 14px;
         color: #4a4a4a;
+        margin-top: 50px;
       }
       .contact-info {
-        position: absolute;
-        top: 10px;
+        position: fixed;
+        bottom: 20px;
         right: 30px;
-        font-size: 14px;
         text-align: right;
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <!-- Sidebar -->
       <div class="sidebar">
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
@@ -78,14 +85,12 @@
         <a href="#">Home</a>
         <a href="https://www.instagram.com/thesteministblog/">The STEMinist Blog</a>
         <a href="#">Publications</a>
-        <a href="#">Articles</a>
+        <a href="#">Articles/Talks</a>
         <a href="#">CV</a>
       </div>
+
+      <!-- Content -->
       <div class="content">
-        <div class="contact-info">
-          <p>Email: cneizer@charlotte.edu</p>
-          <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
-        </div>
         <p>
           Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
           University of North Carolina at Charlotte with a concentration in
@@ -150,6 +155,12 @@
           <p>Last updated: December 2024</p>
         </div>
       </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p>Email: cneizer@charlotte.edu</p>
+      <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
     </div>
   </body>
 </html>
