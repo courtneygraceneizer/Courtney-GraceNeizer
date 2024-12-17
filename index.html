@@ -3,38 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courtney-Grace Neizer - Home</title>
+    <title>Courtney-Grace Neizer</title>
     <style>
       body {
         margin: 0;
-        font-family: 'Times New Roman', serif;
+        font-family: "Times New Roman", serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
       }
       .container {
         display: flex;
-        min-height: 100vh;
       }
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
+        height: 100vh;
         padding: 20px;
         text-align: center;
+        position: fixed;
       }
       .sidebar img {
         border-radius: 50%;
         width: 120px;
         height: 120px;
+        margin-bottom: 10px;
+      }
+      .sidebar h2,
+      .sidebar h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .sidebar h3 {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #4a4a4a;
       }
       .sidebar a {
         display: block;
         margin: 15px 0;
-        color: #dda448;
+        color: #8b5e3c;
         text-decoration: none;
         font-weight: bold;
       }
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
       .content {
         flex: 1;
+        margin-left: 270px;
         padding: 30px;
         text-align: justify;
       }
@@ -43,45 +60,67 @@
         color: black;
       }
       .footer {
-        margin-top: 30px;
         font-size: 14px;
+        color: #4a4a4a;
+        margin-top: 50px;
+      }
+      .contact-info {
         text-align: right;
+        font-size: 14px;
+        margin-right: 20px;
       }
     </style>
   </head>
   <body>
-    <!-- Sidebar -->
     <div class="container">
+      <!-- Sidebar -->
       <div class="sidebar">
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
         <h3>Undergraduate Student at UNC Charlotte</h3>
         <a href="index.html">Home</a>
-        <a href="steminstblog.html">The STEMinist Blog</a>
+        <a href="steministblog.html">The STEMinist Blog</a>
         <a href="publications.html">Publications</a>
-        <a href="#">Articles/Talks</a>
-        <a href="#">CV</a>
+        <a href="articles.html">Articles/Talks</a>
+        <a href="cv.html">CV</a>
       </div>
 
-      <!-- Main Content -->
+      <!-- Content -->
       <div class="content">
         <p>
-          Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the University of North Carolina at Charlotte with a concentration in bioinformatics. I am passionate about empowering others through technology and education. I run
-          <a href="steminstblog.html">The STEMinist Blog</a>, a platform for young girls and women in STEM, promoting cross-cultural exchanges and empowering young girls in STEM. With contributions from female-identifying Ph.D., medical, and undergraduate students in STEM, The STEMinist Blog offers science posts, career advice, and vlogs to support the next generation of women in science and technology.
+          Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
+          University of North Carolina at Charlotte with a concentration in
+          bioinformatics. I am passionate about empowering others through
+          technology and education. I run
+          <a href="https://www.instagram.com/thesteministblog/" target="_blank"
+            ><b>The STEMinist Blog</b></a
+          >, a platform for young girls and women in STEM, promoting
+          cross-cultural exchanges and empowering young girls in STEM. With
+          contributions from female-identifying Ph.D., medical, and
+          undergraduate students in STEM, The STEMinist Blog offers science
+          posts, career advice, and vlogs to support the next generation of
+          women in science and technology.
         </p>
         <p>
-          I work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte in the bioinformatics and statistics department, examining the presence and absence of proteins and linking them to ecosystem functions...
+          I work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte in the
+          bioinformatics and statistics department, examining the presence and
+          absence of proteins and linking them to ecosystem functions,
+          particularly carbon cycling. My project uses machine learning
+          techniques, such as LASSO regression and Random Forest, to analyze
+          microbial genomes, employing statistical methods to identify key
+          factors affecting carbon activities.
         </p>
-
-        <!-- Footer -->
         <div class="footer">
-          <p>Email: cneizer@charlotte.edu | GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
           <p>Last updated: December 2024</p>
+          <div class="contact-info">
+            <p>Email: cneizer@charlotte.edu | GitHub: <a href="https://github.com/cgrezien" target="_blank"><u>cgrezien</u></a></p>
+          </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+
 
 
 
