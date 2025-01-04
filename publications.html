@@ -1,155 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications</title>
     <style>
-      /* General Styles */
-      body {
-        margin: 0;
-        font-family: "Times New Roman", serif;
-        background-color: #f9f5f2;
-        color: #4a4a4a;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      .container {
-        display: flex;
-        flex: 1;
-      }
-      /* Sidebar Styles */
-      .sidebar {
-        background-color: #d9c7b6;
-        width: 250px;
-        height: 100%;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        left: 0;
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2,
-      .sidebar h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .sidebar h3 {
-        font-size: 14px;
-        margin-top: 5px;
-        color: #4a4a4a;
-      }
-      .sidebar a {
-        display: block;
-        margin: 15px 0;
-        color: #8b5e3c;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .sidebar a:hover {
-        text-decoration: underline;
-      }
-      /* Content Styles */
-      .content {
-        flex: 1;
-        margin-left: 270px;
-        padding: 30px;
-        text-align: justify;
-      }
-      .content a {
-        text-decoration: underline;
-        color: black; /* Black links */
-      }
-      /* Footer Styles */
-      .footer {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        padding: 10px 20px;
-        color: #4a4a4a;
-        font-size: 14px;
-        background-color: #f9f5f2; /* Matches the white part */
-        position: relative;
-      }
-      .footer .left {
-        text-align: left;
-      }
-      .footer .right {
-        text-align: right;
-      }
-      .footer a {
-        color: black;
-        text-decoration: underline;
-      }
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+            background-color: #f9f5f2;
+            color: #4a4a4a;
+        }
+        .container {
+            display: flex;
+        }
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: #d9c7b6;
+            width: 250px;
+            height: 100vh; /* Full viewport height */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .sidebar h2,
+        .sidebar h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .sidebar h3 {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #4a4a4a;
+        }
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            color: #8b5e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        /* Content Styles */
+        .content {
+            flex: 1;
+            margin-left: 270px; /* Align content beside sidebar */
+            padding: 30px;
+            text-align: justify;
+        }
+        .content a {
+            text-decoration: underline;
+            color: black; /* Black links */
+        }
+        /* Footer and Contact Styles */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: 50px;
+            margin-left: 270px; /* Align with content */
+            padding: 0 30px;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: black;
+            text-decoration: underline;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Main Container -->
     <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
-        <a href="index.html">Home</a>
-        <a href="steministblog.html">The STEMinist Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="articles.html">Articles/Talks</a>
-        <a href="fellowships.html">Fellowships/Awards</a>
-      </div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="your-image.jpg" alt="Courtney-Grace" />
+            <h2>Courtney-Grace Neizer</h2>
+            <h3>Undergraduate Student at UNC Charlotte</h3>
+            <a href="index.html">Home</a>
+            <a href="steministblog.html">The STEMinist Blog</a>
+            <a href="publications.html">Publications</a>
+            <a href="articles.html">Articles/Talks</a>
+            <a href="fellowships.html">Fellowships/Awards</a>
+        </div>
 
-      <!-- Content -->
-      <div class="content">
-        <h1>Recent Publications</h1>
-        <h2>First Author</h2>
-        <p>
-          <a
-            href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15"
-            target="_blank"
-            >"Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"</a
-          >
-          <br />
-          Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.; EUREKA! - Journal of Undergraduate Research 2024.
-        </p>
-        <p>
-          <details>
-            <summary><b> Abstract (click to expand)</b></summary>
-            Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
-            environmental materials from different organisms. We use graph analysis to examine trends in species
-            diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
-            amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
-            of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
-            following this construction. The family and species number of Homo sapiens, often known as humans,
-            were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
-            fundamental local alignment search method that identifies areas of local sequence similarity. The most
-            common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
-            usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
-            laboratory analyses allowing further investigation of Mill Branch Creek in the future.
-          </details>
-        </p>
-      </div>
+        <!-- Content -->
+        <div class="content">
+            <h1>Recent Publications</h1>
+            <h2>First Author</h2>
+            <p>
+                <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank">
+                    "Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"
+                </a>
+                <br />
+                Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.; EUREKA! - Journal of Undergraduate Research 2024.
+            </p>
+            <p>
+                <details>
+                    <summary><b> Abstract (click to expand)</b></summary>
+                    Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
+                    environmental materials from different organisms. We use graph analysis to examine trends in species
+                    diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
+                    amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
+                    of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
+                    following this construction. The family and species number of Homo sapiens, often known as humans,
+                    were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
+                    fundamental local alignment search method that identifies areas of local sequence similarity. The most
+                    common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
+                    usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
+                    laboratory analyses allowing further investigation of Mill Branch Creek in the future.
+                </details>
+            </p>
+        </div>
     </div>
+
     <!-- Footer -->
     <div class="footer">
-      <div class="left">
         <p>Last updated: January 2025</p>
-      </div>
-      <div class="right">
-        <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
-        <p>GitHub: <a href="https://github.com/cgrezien" target="_blank">cgrezien</a></p>
-      </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:cneizer@charlotte.edu" class="email-link">cneizer@charlotte.edu</a></p>
+            <p>GitHub: <a href="https://github.com/cgrezien" class="github-link">cgrezien</a></p>
+        </div>
     </div>
-  </body>
+</body>
 </html>
+
 
 
 
