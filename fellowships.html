@@ -79,12 +79,31 @@
       .card span {
         font-weight: bold;
       }
+      .card a {
+        color: #8b5e3c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
       /* Footer Styles */
       .footer {
         font-size: 14px;
         color: #4a4a4a;
         margin-top: 50px;
         text-align: center;
+      }
+      .contact-info {
+        text-align: left;
+        margin: 30px auto;
+        max-width: 600px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .contact-info a {
+        color: black;
+        text-decoration: underline;
       }
       /* Responsive Design */
       @media screen and (max-width: 768px) {
@@ -127,10 +146,27 @@
           <p>
             Awarded annually to one undergraduate and one graduate student,
             recognizing outstanding contributions and potential in genetics.
+            Learn more about this fellowship at 
+            <a href="https://www.blackingenetics.com/about-us" target="_blank">Black In Genetics</a>.
           </p>
         </div>
 
-        <!-- Add more awards as needed -->
+        <!-- Award 2 -->
+        <div class="card">
+          <h2>ACM Tapia Conference Travel Award</h2>
+          <p><span>Amount:</span> $1,400</p>
+          <p><span>Date Awarded:</span> July 2024</p>
+          <p>
+            Chosen as one of 10 graduate/undergraduate students from UNC Charlotte
+            to attend the ACM Tapia Diversity in Computing Conference in San Diego, CA.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
+        <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
       </div>
     </div>
 
@@ -140,3 +176,4 @@
     </div>
   </body>
 </html>
+
