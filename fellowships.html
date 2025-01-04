@@ -1,188 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fellowships and Awards</title>
+    <title>Publications</title>
     <style>
-      body {
-        margin: 0;
-        font-family: "Times New Roman", serif;
-        background-color: #f9f5f2;
-        color: #4a4a4a;
-      }
-      .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .sidebar {
-        background-color: #d9c7b6;
-        width: 250px;
-        padding: 20px;
-        text-align: center;
-        flex-shrink: 0;
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2,
-      .sidebar h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .sidebar h3 {
-        font-size: 14px;
-        margin-top: 5px;
-        color: #4a4a4a;
-      }
-      .sidebar a {
-        display: block;
-        margin: 15px 0;
-        color: #8b5e3c;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .sidebar a:hover {
-        text-decoration: underline;
-      }
-      .content {
-        flex: 1;
-        padding: 30px;
-      }
-      h1 {
-        text-align: center;
-        color: #8b5e3c;
-      }
-      .card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 600px;
-        background-color: #fff;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      .card h2 {
-        font-size: 1.5em;
-        margin: 0;
-        color: #8b5e3c;
-      }
-      .card p {
-        margin: 10px 0 0;
-        line-height: 1.6;
-      }
-      .card span {
-        font-weight: bold;
-      }
-      .content a {
-        text-decoration: underline;
-        color: #d9a24e; /* Matches the hyperlink color in index.html */
-      }
-      /* Footer Styles */
-      .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 30px;
-        font-size: 14px;
-        color: #4a4a4a;
-        background-color: #f9f5f2;
-        margin-top: 50px;
-      }
-      .footer-left {
-        text-align: left;
-      }
-      .footer-right {
-        text-align: right;
-      }
-      .footer a {
-        color: black;
-        text-decoration: underline;
-      }
-      /* Responsive Design */
-      @media screen and (max-width: 768px) {
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+            background-color: #f9f5f2;
+            color: #4a4a4a;
+        }
         .container {
-          flex-direction: column;
+            display: flex;
         }
+        /* Sidebar Styles */
         .sidebar {
-          width: 100%;
-          text-align: center;
+            background-color: #d9c7b6;
+            width: 250px;
+            height: 100vh; /* Full viewport height */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
         }
+        .sidebar img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .sidebar h2,
+        .sidebar h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .sidebar h3 {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #4a4a4a;
+        }
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            color: #8b5e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        /* Content Styles */
         .content {
-          margin-left: 0;
+            flex: 1;
+            margin-left: 270px; /* Align content beside sidebar */
+            padding: 30px;
+            text-align: justify;
         }
+        .content a {
+            text-decoration: underline;
+            color: black; /* Black links */
+        }
+        /* Footer and Contact Styles */
         .footer {
-          flex-direction: column;
-          text-align: center;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: 50px;
+            margin-left: 270px; /* Align with content */
+            padding: 0 30px;
         }
-        .footer-left,
-        .footer-right {
-          margin: 5px 0;
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
         }
-      }
+        .contact-info a {
+            color: black;
+            text-decoration: underline;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Main Container -->
     <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
-        <a href="index.html">Home</a>
-        <a href="steministblog.html">The STEMinist Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="articles.html">Articles/Talks</a>
-        <a href="fellowships.html">Fellowships/Awards</a>
-      </div>
-
-      <!-- Content -->
-      <div class="content">
-        <h1>Fellowships and Awards</h1>
-        
-        <!-- Award 1 -->
-        <div class="card">
-          <h2>Black In Genetics Fellowship Award</h2>
-          <p><span>Amount:</span> $5,000</p>
-          <p><span>Date Awarded:</span> Fall 2024</p>
-          <p>
-            Awarded annually to one undergraduate and one graduate student,
-            recognizing outstanding contributions and potential in genetics. Learn
-            more about this fellowship at
-            <a href="https://www.blackingenetics.com/about-us" target="_blank">Black In Genetics</a>.
-          </p>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="your-image.jpg" alt="Courtney-Grace" />
+            <h2>Courtney-Grace Neizer</h2>
+            <h3>Undergraduate Student at UNC Charlotte</h3>
+            <a href="index.html">Home</a>
+            <a href="steministblog.html">The STEMinist Blog</a>
+            <a href="publications.html">Publications</a>
+            <a href="articles.html">Articles/Talks</a>
+            <a href="fellowships.html">Fellowships/Awards</a>
         </div>
 
-        <!-- Award 2 -->
-        <div class="card">
-          <h2>ACM Tapia Conference Travel Award</h2>
-          <p><span>Amount:</span> $1,400</p>
-          <p><span>Date Awarded:</span> July 2024</p>
-          <p>
-            Chosen as one of 10 graduate/undergraduate students from UNC Charlotte
-            to attend the ACM Tapia Diversity in Computing Conference in San Diego, CA.
-          </p>
+        <!-- Content -->
+        <div class="content">
+            <h1>Recent Publications</h1>
+            <h2>First Author</h2>
+            <p>
+                <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank">
+                    "Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"
+                </a>
+                <br />
+                Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.; EUREKA! - Journal of Undergraduate Research 2024.
+            </p>
+            <p>
+                <details>
+                    <summary><b> Abstract (click to expand)</b></summary>
+                    Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
+                    environmental materials from different organisms. We use graph analysis to examine trends in species
+                    diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
+                    amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
+                    of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
+                    following this construction. The family and species number of Homo sapiens, often known as humans,
+                    were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
+                    fundamental local alignment search method that identifies areas of local sequence similarity. The most
+                    common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
+                    usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
+                    laboratory analyses allowing further investigation of Mill Branch Creek in the future.
+                </details>
+            </p>
         </div>
-      </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-      <div class="footer-left">
         <p>Last updated: January 2025</p>
-      </div>
-      <div class="footer-right">
-        <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
-        <p>GitHub: <a href="https://github.com/cgrezien" target="_blank">cgrezien</a></p>
-      </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:cneizer@charlotte.edu" class="email-link">cneizer@charlotte.edu</a></p>
+            <p>GitHub: <a href="https://github.com/cgrezien" class="github-link">cgrezien</a></p>
+        </div>
     </div>
-  </body>
+</body>
 </html>
+
 
 
 
