@@ -11,15 +11,19 @@
         font-family: "Times New Roman", serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
       .container {
         display: flex;
+        flex: 1;
       }
       /* Sidebar Styles */
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
-        height: 100vh;
+        height: 100%;
         padding: 20px;
         text-align: center;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -57,7 +61,7 @@
       /* Content Styles */
       .content {
         flex: 1;
-        margin-left: 270px; /* Align content beside sidebar */
+        margin-left: 270px;
         padding: 30px;
         text-align: justify;
       }
@@ -65,22 +69,23 @@
         text-decoration: underline;
         color: black; /* Black links */
       }
-      /* Footer and Contact Styles */
+      /* Footer Styles */
       .footer {
-        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #d9c7b6;
+        padding: 10px 20px;
         color: #4a4a4a;
-        margin-top: 50px;
-      }
-      .contact-info {
-        text-align: right;
         font-size: 14px;
-        margin-right: 20px;
+        position: relative;
       }
-      .contact-info a.email-link {
-        text-decoration: underline; /* Underline email username */
-        color: black;
+      .footer .left {
+        text-align: left;
       }
-      .contact-info a.github-link {
+      .footer .right {
+        text-align: right;
+      }
+      .footer a {
         color: black;
         text-decoration: underline;
       }
@@ -112,7 +117,7 @@
             >"Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"</a
           >
           <br />
-          Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.; EUREKA! - Journal of Undergraduate Research 2024. 
+          Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.; EUREKA! - Journal of Undergraduate Research 2024.
         </p>
         <p>
           <details>
@@ -130,21 +135,20 @@
             laboratory analyses allowing further investigation of Mill Branch Creek in the future.
           </details>
         </p>
-        <!-- Footer -->
-        <div class="footer">
-          <div class="contact-info">
-            <p>Email:
-              <a href="mailto:cneizer@charlotte.edu" class="email-link">cneizer@charlotte.edu</a></p>
-            <p>GitHub:
-              <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
-            </p>
-          </div>
-          <p>Last updated: January 2025</p>
-        </div>
       </div>
     </div>
-  </body>
-</html>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="left">
+        <p>Last updated: January 2025</p>
+      </div>
+      <div class="right">
+        <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
+        <p>GitHub: <a href="https://github.com/cgrezien" target="_blank">cgrezien</a></p>
+      </div>
+    </div>
+  </bo
+
 
 
 
