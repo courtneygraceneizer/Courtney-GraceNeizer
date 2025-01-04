@@ -10,19 +10,24 @@
         font-family: "Times New Roman", serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
       }
       .container {
         display: flex;
+        flex: 1;
       }
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
-        height: 100vh; /* Full viewport height */
         padding: 20px;
         text-align: center;
+        flex-shrink: 0;
+        height: 100vh; /* Ensure it extends to full height */
         position: fixed;
-        left: 0;
         top: 0;
+        left: 0;
       }
       .sidebar img {
         border-radius: 50%;
@@ -52,39 +57,38 @@
         text-decoration: underline;
       }
       .content {
-        margin-left: 270px; /* Align content beside sidebar */
-        padding: 30px;
         flex: 1;
+        margin-left: 270px; /* Adjust for the sidebar */
+        padding: 30px;
         text-align: justify;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Ensure footer aligns at the bottom */
       }
       .content a {
         text-decoration: underline;
         color: #d9a24e;
       }
-      /* Footer Styles */
       .footer {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        margin-top: auto;
+        align-items: center;
         font-size: 14px;
         color: #4a4a4a;
+        margin-top: auto;
       }
       .contact-info a {
         color: black;
         text-decoration: underline;
       }
+
+      /* Responsive Design */
       @media screen and (max-width: 768px) {
         .container {
           flex-direction: column;
         }
         .sidebar {
           width: 100%;
-          height: auto;
+          text-align: center;
           position: relative;
+          height: auto;
         }
         .content {
           margin-left: 0;
@@ -108,6 +112,11 @@
 
       <!-- Content -->
       <div class="content">
+        <!-- Animated Text -->
+        <div class="animated-text">
+          <span id="dynamicText"></span><span class="cursor"></span>
+        </div>
+
         <!-- Main Content -->
         <p>
           Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
@@ -117,13 +126,19 @@
           <a href="https://www.instagram.com/thesteministblog/" target="_blank"
             ><b>The STEMinist Blog</b></a
           >, a platform for young girls and women in STEM, promoting
-          cross-cultural exchanges and empowering young girls in STEM.
+          cross-cultural exchanges and empowering young girls in STEM. With
+          contributions from female-identifying Ph.D., medical, and
+          undergraduate students in STEM, The STEMinist Blog offers science
+          posts, career advice, and vlogs to support the next generation of
+          women in science and technology.
         </p>
 
         <p>
           <u>I currently work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte</u> in the bioinformatics and statistics 
           department, examining the presence and absence of proteins and linking them to ecosystem functions, 
-          particularly carbon cycling for my honors thesis. You can read more about my research 
+          particularly carbon cycling for my honors thesis. My project uses machine learning techniques, such as LASSO regression and 
+          Random Forest, to analyze microbial genomes, employing statistical methods to identify key factors 
+          affecting carbon activities. You can read more about my research 
           <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0">here</a>.
         </p>
 
@@ -137,9 +152,32 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const phrases = ["Welcome to my website!", "Hello there!"];
+      let i = 0;
+      let j = 0;
+      const dynamicText = document.getElementById("dynamicText");
+      const cursor = document.querySelector(".cursor");
+
+      function type() {
+        if (j < phrases[i].length) {
+          dynamicText.textContent += phrases[i][j];
+          j++;
+          setTimeout(type, 100);
+        } else {
+          setTimeout(() => {
+            dynamicText.textContent = "";
+            j = 0;
+            i = (i + 1) % phrases.length;
+            type();
+          }, 2000);
+        }
+      }
+      type();
+    </script>
   </body>
 </html>
-
 
 
 
