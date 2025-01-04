@@ -79,20 +79,28 @@
       .card span {
         font-weight: bold;
       }
+      .content a {
+        text-decoration: underline;
+        color: #d9a24e; /* Matches the hyperlink color in index.html */
+      }
       /* Footer Styles */
       .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
         font-size: 14px;
         color: #4a4a4a;
-        text-align: center;
+        background-color: #f9f5f2;
         margin-top: 50px;
       }
-      .contact-info {
-        margin-top: 30px;
+      .footer-left {
+        text-align: left;
       }
-      .contact-info p {
-        margin: 0;
+      .footer-right {
+        text-align: right;
       }
-      .contact-info a {
+      .footer a {
         color: black;
         text-decoration: underline;
       }
@@ -107,6 +115,14 @@
         }
         .content {
           margin-left: 0;
+        }
+        .footer {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-left,
+        .footer-right {
+          margin: 5px 0;
         }
       }
     </style>
@@ -152,19 +168,22 @@
             to attend the ACM Tapia Diversity in Computing Conference in San Diego, CA.
           </p>
         </div>
-
-        <!-- Contact Info -->
-        <div class="footer">
-          <div class="contact-info">
-            <p>Email:
-              <a href="mailto:cneizer@charlotte.edu" class="email-link">cneizer@charlotte.edu</a></p>
-            <p>GitHub:
-              <a href="https://github.com/cgrezien" class="github-link">cgrezien</a></p>
-          </div>
-          <p>Last updated: January 2025</p>
-        </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-left">
+        <p>Last updated: January 2025</p>
+      </div>
+      <div class="footer-right">
+        <p>Email: <a href="mailto:cneizer@charlotte.edu">cneizer@charlotte.edu</a></p>
+        <p>GitHub: <a href="https://github.com/cgrezien" target="_blank">cgrezien</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+
 
 
 
