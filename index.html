@@ -18,7 +18,6 @@
         display: flex;
         flex: 1;
         flex-direction: row;
-        flex-wrap: wrap;
       }
       .sidebar {
         background-color: #d9c7b6;
@@ -26,7 +25,7 @@
         padding: 20px;
         text-align: center;
         flex-shrink: 0;
-        height: 100%;
+        height: 100vh;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
       .sidebar img {
@@ -67,60 +66,34 @@
       }
       /* Adjusted Links Color */
       .content a[href="https://www.instagram.com/thesteministblog/"] {
-        color: #d9a24e; /* Matches the color of the 'here' link */
-      }
-
-      /* Animated Welcome Text */
-      .animated-text {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #000;
-      }
-      .cursor {
-        display: inline-block;
-        background-color: #000;
-        width: 10px;
-        height: 20px;
-        animation: blink 0.7s steps(2, start) infinite;
-      }
-      @keyframes blink {
-        0%, 50% {
-          opacity: 1;
-        }
-        51%, 100% {
-          opacity: 0;
-        }
+        color: #d9a24e;
       }
 
       /* Footer Styles */
       .footer {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-top: auto;
         padding: 10px 30px;
         background-color: #f9f5f2;
-        font-size: 14px;
-        color: #4a4a4a;
-      }
-      .contact-info {
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-      .contact-info a.email-link {
-        text-decoration: underline; /* Underline username */
-        color: black;
-      }
-      .contact-info a.github-link {
-        color: black;
-        text-decoration: underline;
       }
       .footer p {
         margin: 5px 0;
+      }
+      .left-footer {
+        text-align: left;
+      }
+      .center-footer {
+        text-align: center;
+        flex: 1;
+      }
+      .contact-info {
+        text-align: right;
+        font-size: 14px;
+      }
+      .contact-info a {
+        color: black;
+        text-decoration: underline;
       }
 
       /* Responsive Design */
@@ -136,7 +109,11 @@
           margin-left: 0;
         }
         .footer {
+          flex-direction: column;
           text-align: center;
+        }
+        .center-footer {
+          margin-top: 10px;
         }
       }
     </style>
@@ -187,15 +164,21 @@
           <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0">here</a>.
         </p>
       </div>
+    </div>
 
-      <!-- Footer -->
-      <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
+      <div class="left-footer">
+        <p>Last updated: January 2025</p>
+      </div>
+      <div class="center-footer">
         <p>This webpage format is open-source, please email me for usage.</p>
-        <div class="contact-info">
-          <p>Email: cneizer [at] charlotte [dot] edu</p>
-          <p>GitHub: <a href="https://github.com/cgrezien" class="github-link">cgrezien</a></p>
-          <p>Last updated: January 2025</p>
-        </div>
+      </div>
+      <div class="contact-info">
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
+        <p>GitHub:
+          <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
+        </p>
       </div>
     </div>
 
@@ -224,6 +207,7 @@
     </script>
   </body>
 </html>
+
 
 
 
