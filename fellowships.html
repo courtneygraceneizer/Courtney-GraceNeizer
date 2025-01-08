@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fellowships and Awards</title>
     <style>
-      body {
+      body, html {
         margin: 0;
         font-family: "Times New Roman", serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
+        height: 100%; /* Ensure the body and html take full height */
       }
       .container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        min-height: 100vh; /* Ensure the container takes full height of the page */
       }
       .sidebar {
         background-color: #d9c7b6;
@@ -22,7 +24,7 @@
         padding: 20px;
         text-align: center;
         flex-shrink: 0;
-        height: 100vh;
+        height: 100%; /* Stretch sidebar to match container height */
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
       .sidebar img {
@@ -146,8 +148,6 @@
       <!-- Content -->
       <div class="content">
         <h1>Fellowships and Awards</h1>
-        
-        <!-- Award 1 -->
         <div class="card">
           <h2>Black In Genetics Fellowship Award</h2>
           <p><span>Amount:</span> $5,000</p>
@@ -159,8 +159,6 @@
             <a href="https://www.blackingenetics.com/about-us" target="_blank">Black In Genetics</a>.
           </p>
         </div>
-
-        <!-- Award 2 -->
         <div class="card">
           <h2>ACM Tapia Conference Travel Award</h2>
           <p><span>Amount:</span> $1,400</p>
@@ -185,6 +183,7 @@
     </div>
   </body>
 </html>
+
 
 
 
