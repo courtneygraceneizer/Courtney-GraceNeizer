@@ -1,189 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courtney-Grace Neizer</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Courtney-Grace Neizer</title>
+
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: #f9f5f2;
-            color: #333;
-            animation: fadeIn ease 3s;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
 
-        @keyframes fadeIn {
-            from {
+        @keyframes fadeInAnimation {
+            0% {
                 opacity: 0;
             }
-            to {
+
+            100% {
                 opacity: 1;
             }
         }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        .headertext a {
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .headertext a:hover {
-            color: #8b5e3c;
-        }
-
-        .home {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .homeimg img {
-            max-width: 40%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .home-text {
-            flex: 1;
-            padding-left: 30px;
-        }
-
-        .home-text h1 {
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .home-text p {
-            line-height: 1.6;
-            font-size: 18px;
-        }
-
-        .home-text button {
-            padding: 10px 20px;
-            background-color: #8b5e3c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .home-text button:hover {
-            background-color: #d9a24e;
-        }
-
-        .sections {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 40px;
-        }
-
-        .column {
-            flex: 1;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .column img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .column h3 {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .recents {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .recents h2 {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        .recent_projects img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .footer h1 {
-            font-size: 22px;
-        }
-
-        .footerlinks a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .footerlinks a:hover {
-            color: #d9a24e;
-        }
-
-        .footericons a {
-            margin: 0 10px;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .footericons a:hover {
-            color: #d9a24e;
-        }
     </style>
+
 </head>
 
 <body>
     <div class="header">
-        <h1>Courtney-Grace Neizer</h1>
+        <a href="index.html">
+            <h1>Courtney-Grace Neizer</h1>
+        </a>
         <div class="headertext">
-            <a href="index.html">CS & Bioinformatics</a>
-            <a href="steministblog.html">The STEMinist Blog</a>
-            <a href="#">Innovative AI Resource (Coming Soon)</a>
+            <a href="csbioinformatics.html" class="csbioinformatics">CS & Bioinformatics</a>
+            <a href="steministblog.html" class="steministblog">The STEMinist Blog</a>
+            <a href="#" class="airesource">AI Resource Hub (Coming Soon)</a>
         </div>
     </div>
 
     <div class="home">
         <div class="homeimg">
-            <img src="your-image.jpg" alt="Courtney-Grace Neizer">
+            <img src="your-image.jpg">
         </div>
         <div class="home-text">
             <h1>Innovator • Visionary • Researcher</h1>
             <p>
-                Courtney-Grace is a fourth-year Computer Science student with a concentration in Bioinformatics. She is passionate about empowering women in STEM through <b>The STEMinist Blog</b>, a platform for education and collaboration. With experience in genomics, AI, and creative problem-solving, she aims to revolutionize the way STEM is communicated globally.
+                Courtney-Grace is a fourth-year student studying Computer Science with a concentration in Bioinformatics.
+                She blends her technical expertise with a passion for empowering others through projects like <b>The STEMinist Blog</b>,
+                a platform to inspire and educate future leaders in STEM. Her vision extends to harnessing AI and bioinformatics to
+                revolutionize how STEM resources are accessed globally.
             </p>
             <a href="Resume.pdf"><button>Resume</button></a>
         </div>
@@ -192,46 +59,61 @@
     <div class="sections">
         <div class="column">
             <h3>CS & Bioinformatics</h3>
-            <a href="csbioinformatics.html"><img src="1.png" alt="Bioinformatics"></a>
+            <a href="csbioinformatics.html">
+                <img src="1.png" style="width:100%">
+            </a>
         </div>
         <div class="column">
             <h3>The STEMinist Blog</h3>
-            <a href="steministblog.html"><img src="2.png" alt="The STEMinist Blog"></a>
+            <a href="steministblog.html">
+                <img src="2.png" style="width:100%">
+            </a>
         </div>
         <div class="column">
             <h3>AI Resource Hub</h3>
-            <a href="#"><img src="3.png" alt="AI Project"></a>
+            <a href="#">
+                <img src="3.png" style="width:100%">
+            </a>
         </div>
     </div>
 
     <div class="recents">
-        <h2>Highlighted Work</h2>
+        <div class="recent_projects_text">
+            <h2>Highlighted Work</h2>
+        </div>
         <div class="recent_projects">
-            <img src="project1.png" alt="Project 1">
-            <img src="project2.png" alt="Project 2">
-            <img src="project3.png" alt="Project 3">
+            <img src="project1.png">
+            <img src="project2.png">
+            <img src="project3.png">
         </div>
     </div>
 
     <div class="footer">
+
         <div class="footername">
-            <h1>Courtney-Grace Neizer</h1>
+            <a href="index.html">
+                <h1>Courtney-Grace Neizer</h1>
+            </a>
         </div>
+
         <div class="footerlinks">
-            <a href="index.html">CS & Bioinformatics</a>
+            <a href="csbioinformatics.html">CS & Bioinformatics</a>
             <a href="steministblog.html">The STEMinist Blog</a>
             <a href="#">AI Resource Hub</a>
         </div>
+
         <div class="footericons">
-            <a href="https://github.com/cgrezien" class="fa fa-github"></a>
             <a href="https://www.linkedin.com/in/courtney-graceneizer/" class="fa fa-linkedin"></a>
             <a href="mailto:cneizer [at] charlotte [dot] edu" class="fa fa-envelope"></a>
+            <a href="https://github.com/Courtney-GraceNeizer" class="fa fa-github"></a>
         </div>
+
     </div>
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
-
 
 
 
