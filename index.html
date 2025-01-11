@@ -1,247 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courtney-Grace Neizer</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      body {
-        margin: 0;
-        font-family: "Times New Roman", serif;
-        background-color: #f9f5f2;
-        color: #4a4a4a;
-      }
-      .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .sidebar {
-        background-color: #d9c7b6;
-        width: 250px;
-        padding: 20px;
-        text-align: center;
-        flex-shrink: 0;
-        height: 100vh;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2 {
-        margin: 0;
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .sidebar h3 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 5px;
-        color: #4a4a4a;
-      }
-      .sidebar a {
-        display: block;
-        margin: 15px 0;
-        color: #8b5e3c;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .sidebar a:hover {
-        text-decoration: underline;
-      }
-      .social-icons {
-        margin-top: 15px;
-      }
-      .social-icons a {
-        display: block;
-        color: #4a4a4a;
-        font-size: 20px;
-        margin: 10px 0;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      .social-icons a:hover {
-        color: #8b5e3c;
-      }
-      .content {
-        flex: 1;
-        padding: 30px;
-        text-align: justify;
-      }
-      .content a {
-        text-decoration: underline;
-        color: #d9a24e;
-      }
-      .animated-text {
-        font-size: 2em;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #000;
-      }
-      .cursor {
-        display: inline-block;
-        background-color: #000;
-        width: 10px;
-        height: 20px;
-        animation: blink 0.7s steps(2, start) infinite;
-      }
-      @keyframes blink {
-        0%,
-        50% {
-          opacity: 1;
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #f9f5f2;
+            color: #333;
+            animation: fadeIn ease 3s;
         }
-        51%,
-        100% {
-          opacity: 0;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-      }
-      .footer {
-        font-size: 14px;
-        color: #4a4a4a;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        margin-top: 50px;
-      }
-      .centered-message {
-        text-align: center;
-        flex: 1;
-        margin: 0 auto;
-      }
-      .contact-info {
-        font-size: 14px;
-      }
-      @media screen and (max-width: 768px) {
-        .container {
-          flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .sidebar {
-          width: 100%;
-          text-align: center;
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
         }
-        .content {
-          margin-left: 0;
+
+        .headertext a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #555;
         }
+
+        .headertext a:hover {
+            color: #8b5e3c;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .homeimg img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .home-text {
+            flex: 1;
+            padding-left: 30px;
+        }
+
+        .home-text h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .home-text p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .home-text button {
+            padding: 10px 20px;
+            background-color: #8b5e3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .home-text button:hover {
+            background-color: #d9a24e;
+        }
+
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 40px;
+        }
+
+        .column {
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .column img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .recents {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .recents h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .recent_projects img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .footer {
-          flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #333;
+            color: #fff;
         }
-      }
+
+        .footer h1 {
+            font-size: 22px;
+        }
+
+        .footerlinks a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footerlinks a:hover {
+            color: #d9a24e;
+        }
+
+        .footericons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .footericons a:hover {
+            color: #d9a24e;
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
-        <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <!-- Social Icons -->
-        <div class="social-icons">
-          <a href="https://github.com/cgrezien" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/courtney-graceneizer/"
-            target="_blank"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a
-            href="https://www.instagram.com/thesteministblog/"
-            target="_blank"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-        </div>
-        <a href="index.html">Home</a>
-        <a href="steministblog.html">The STEMinist Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="articles.html">Articles/Talks</a>
-        <a href="fellowships.html">Fellowships/Awards</a>
-      </div>
+</head>
 
-      <!-- Content -->
-      <div class="content">
-        <div class="animated-text">
-          <span id="dynamicText"></span><span class="cursor"></span>
+<body>
+    <div class="header">
+        <h1>Courtney-Grace Neizer</h1>
+        <div class="headertext">
+            <a href="index.html">CS & Bioinformatics</a>
+            <a href="steministblog.html">The STEMinist Blog</a>
+            <a href="#">Resource Project (Coming Soon)</a>
         </div>
-        <p>
-          Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
-          University of North Carolina at Charlotte with a concentration in
-          bioinformatics. I am passionate about empowering others through
-          technology and education. I run
-          <a href="https://www.instagram.com/thesteministblog/" target="_blank"
-            ><b>The STEMinist Blog</b></a
-          >, a platform for young girls and women in STEM, promoting
-          cross-cultural exchanges and empowering young girls in STEM. With
-          contributions from female-identifying Ph.D., medical, and
-          undergraduate students in STEM, The STEMinist Blog offers science
-          posts, career advice, and vlogs to support the next generation of
-          women in science and technology.
-        </p>
-        <p>
-          <u>I currently work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte</u> in the bioinformatics and statistics
-          department, examining the presence and absence of proteins and linking them to ecosystem functions,
-          particularly carbon cycling for my honors thesis. My project uses machine learning techniques, such as LASSO regression and
-          Random Forest, to analyze microbial genomes, employing statistical methods to identify key factors
-          affecting carbon activities. You can read more about my research
-          <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0">here</a>.
-        </p>
-      </div>
     </div>
 
-    <!-- Footer -->
+    <div class="home">
+        <div class="homeimg">
+            <img src="your-image.jpg" alt="Courtney-Grace Neizer">
+        </div>
+        <div class="home-text">
+            <h1>Innovator • Mentor • Researcher</h1>
+            <p>
+                Courtney-Grace is a fourth-year Computer Science student with a concentration in Bioinformatics. She is passionate about empowering women in STEM through <b>The STEMinist Blog</b>, a platform for mentorship and education. With experience in genomics, machine learning, and public engagement, she aspires to redefine how STEM is communicated and accessed globally.
+            </p>
+            <a href="Resume.pdf"><button>Resume</button></a>
+        </div>
+    </div>
+
+    <div class="sections">
+        <div class="column">
+            <h3>CS & Bioinformatics</h3>
+            <a href="csbioinformatics.html"><img src="1.png" alt="Bioinformatics"></a>
+        </div>
+        <div class="column">
+            <h3>The STEMinist Blog</h3>
+            <a href="steministblog.html"><img src="2.png" alt="The STEMinist Blog"></a>
+        </div>
+        <div class="column">
+            <h3>Resource Project</h3>
+            <a href="#"><img src="3.png" alt="AI Project"></a>
+        </div>
+    </div>
+
+    <div class="recents">
+        <h2>Recent Projects</h2>
+        <div class="recent_projects">
+            <img src="project1.png" alt="Project 1">
+            <img src="project2.png" alt="Project 2">
+            <img src="project3.png" alt="Project 3">
+        </div>
+    </div>
+
     <div class="footer">
-      <p>Last updated: January 2025</p>
-      <div class="centered-message">
-        <p>This webpage format is open-source, please email me for usage.</p>
-      </div>
-      <div class="contact-info">
-        <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <p>GitHub:
-          <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
-        </p>
-      </div>
+        <div class="footername">
+            <h1>Courtney-Grace Neizer</h1>
+        </div>
+        <div class="footerlinks">
+            <a href="index.html">CS & Bioinformatics</a>
+            <a href="steministblog.html">The STEMinist Blog</a>
+            <a href="#">Resource Project</a>
+        </div>
+        <div class="footericons">
+            <a href="https://github.com/cgrezien" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/courtney-graceneizer/" class="fa fa-linkedin"></a>
+        </div>
     </div>
+</body>
 
-    <script>
-      const phrases = ["Welcome to my website!", "Hello there!"];
-      let i = 0;
-      let j = 0;
-      const dynamicText = document.getElementById("dynamicText");
-      const cursor = document.querySelector(".cursor");
-
-      function type() {
-        if (j < phrases[i].length) {
-          dynamicText.textContent += phrases[i][j];
-          j++;
-          setTimeout(type, 100);
-        } else {
-          setTimeout(() => {
-            dynamicText.textContent = "";
-            j = 0;
-            i = (i + 1) % phrases.length;
-            type();
-          }, 2000);
-        }
-      }
-      type();
-    </script>
-  </body>
 </html>
+
 
 
 
