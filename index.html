@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courtney-Grace Neizer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       body {
         margin: 0;
@@ -13,16 +17,17 @@
       }
       .container {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
-        height: 100vh; /* Full viewport height */
         padding: 20px;
         text-align: center;
-        position: fixed;
-        left: 0;
-        top: 0;
+        flex-shrink: 0;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
       .sidebar img {
         border-radius: 50%;
@@ -30,14 +35,15 @@
         height: 120px;
         margin-bottom: 10px;
       }
-      .sidebar h2,
-      .sidebar h3 {
+      .sidebar h2 {
         margin: 0;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: bold;
       }
       .sidebar h3 {
+        margin: 0;
         font-size: 14px;
+        font-weight: bold;
         margin-top: 5px;
         color: #4a4a4a;
       }
@@ -51,31 +57,69 @@
       .sidebar a:hover {
         text-decoration: underline;
       }
+      .social-icons {
+        margin-top: 15px;
+      }
+      .social-icons a {
+        display: block;
+        color: #4a4a4a;
+        font-size: 20px;
+        margin: 10px 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #8b5e3c;
+      }
       .content {
-        margin-left: 270px; /* Align content beside sidebar */
-        padding: 30px;
         flex: 1;
+        padding: 30px;
         text-align: justify;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Ensure footer aligns at the bottom */
       }
       .content a {
         text-decoration: underline;
         color: #d9a24e;
       }
-      /* Footer Styles */
+      .animated-text {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #000;
+      }
+      .cursor {
+        display: inline-block;
+        background-color: #000;
+        width: 10px;
+        height: 20px;
+        animation: blink 0.7s steps(2, start) infinite;
+      }
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
       .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-top: auto;
         font-size: 14px;
         color: #4a4a4a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
       }
-      .contact-info a {
-        color: black;
-        text-decoration: underline;
+      .centered-message {
+        text-align: center;
+        flex: 1;
+        margin: 0 auto;
+      }
+      .contact-info {
+        font-size: 14px;
       }
       @media screen and (max-width: 768px) {
         .container {
@@ -83,11 +127,13 @@
         }
         .sidebar {
           width: 100%;
-          height: auto;
-          position: relative;
+          text-align: center;
         }
         .content {
           margin-left: 0;
+        }
+        .footer {
+          flex-direction: column;
         }
       }
     </style>
@@ -99,6 +145,27 @@
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
         <h3>Undergraduate Student at UNC Charlotte</h3>
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://github.com/cgrezien" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/courtney-graceneizer/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/thesteministblog/"
+            target="_blank"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
         <a href="index.html">Home</a>
         <a href="steministblog.html">The STEMinist Blog</a>
         <a href="publications.html">Publications</a>
@@ -108,7 +175,9 @@
 
       <!-- Content -->
       <div class="content">
-        <!-- Main Content -->
+        <div class="animated-text">
+          <span id="dynamicText"></span><span class="cursor"></span>
+        </div>
         <p>
           Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
           University of North Carolina at Charlotte with a concentration in
@@ -117,26 +186,60 @@
           <a href="https://www.instagram.com/thesteministblog/" target="_blank"
             ><b>The STEMinist Blog</b></a
           >, a platform for young girls and women in STEM, promoting
-          cross-cultural exchanges and empowering young girls in STEM.
+          cross-cultural exchanges and empowering young girls in STEM. With
+          contributions from female-identifying Ph.D., medical, and
+          undergraduate students in STEM, The STEMinist Blog offers science
+          posts, career advice, and vlogs to support the next generation of
+          women in science and technology.
         </p>
-
         <p>
-          <u>I currently work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte</u> in the bioinformatics and statistics 
-          department, examining the presence and absence of proteins and linking them to ecosystem functions, 
-          particularly carbon cycling for my honors thesis. You can read more about my research 
+          <u>I currently work under Dr. Elaine Luo and Dr. Wenyu Gao at UNC Charlotte</u> in the bioinformatics and statistics
+          department, examining the presence and absence of proteins and linking them to ecosystem functions,
+          particularly carbon cycling for my honors thesis. My project uses machine learning techniques, such as LASSO regression and
+          Random Forest, to analyze microbial genomes, employing statistical methods to identify key factors
+          affecting carbon activities. You can read more about my research
           <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0">here</a>.
         </p>
-
-        <!-- Footer -->
-        <div class="footer">
-          <p>Last updated: January 2025</p>
-          <div class="contact-info">
-            <p>Email: cneizer [at] charlotte [dot] edu</p>
-            <p>GitHub: <a href="https://github.com/cgrezien">cgrezien</a></p>
-          </div>
-        </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Last updated: January 2025</p>
+      <div class="centered-message">
+        <p>This webpage format is open-source, please email me for usage.</p>
+      </div>
+      <div class="contact-info">
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
+        <p>GitHub:
+          <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const phrases = ["Welcome to my website!", "Hello there!"];
+      let i = 0;
+      let j = 0;
+      const dynamicText = document.getElementById("dynamicText");
+      const cursor = document.querySelector(".cursor");
+
+      function type() {
+        if (j < phrases[i].length) {
+          dynamicText.textContent += phrases[i][j];
+          j++;
+          setTimeout(type, 100);
+        } else {
+          setTimeout(() => {
+            dynamicText.textContent = "";
+            j = 0;
+            i = (i + 1) % phrases.length;
+            type();
+          }, 2000);
+        }
+      }
+      type();
+    </script>
   </body>
 </html>
 
