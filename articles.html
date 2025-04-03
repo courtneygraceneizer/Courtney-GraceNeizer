@@ -1,54 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articles & Talks</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Times New Roman", serif;
-      background-color: #f9f5f2;
-      color: #4a4a4a;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fffdf9;
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    }
-    h1, h3 {
-      color: #8b5e3c;
-    }
-    a {
-      color: black;
-      text-decoration: underline;
-    }
-    iframe {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles/Talks</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Times New Roman", serif;
+        background-color: #f9f5f2;
+        color: #4a4a4a;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .sidebar {
+        background-color: #d9c7b6;
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        flex-shrink: 0;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+      }
+      .sidebar h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .sidebar h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+        color: #4a4a4a;
+      }
+      .sidebar a {
+        display: block;
+        margin: 15px 0;
+        color: #8b5e3c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+      .social-icons {
+        margin-top: 15px;
+      }
+      .social-icons a {
+        display: block;
+        color: #4a4a4a;
+        font-size: 20px;
+        margin: 10px 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #8b5e3c;
+      }
+      .content {
+        flex: 1;
+        padding: 30px;
+        text-align: left;
+      }
+      .content h1 {
+        color: #8b5e3c;
+      }
+      iframe {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+      }
+      .talk {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <img src="your-image.jpg" alt="Courtney-Grace" />
+        <h2>Courtney-Grace Neizer</h2>
+        <h3>Undergraduate Student at UNC Charlotte</h3>
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
+        <div class="social-icons">
+          <a href="https://github.com/courtneygraceneizer" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/courtney-graceneizer/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/thesteministblog/"
+            target="_blank"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="steministblog.html">The STEMinist Blog</a>
+        <a href="publications.html">Publications</a>
+        <a href="articles.html">Articles/Talks</a>
+        <a href="fellowships.html">Fellowships/Awards</a>
+      </div>
 
-  <div class="container">
-    <h1>Articles & Talks</h1>
-    <p>Explore my invited talks, research presentations, and public speaking engagements.</p>
+      <!-- Content -->
+      <div class="content">
+        <h1>Articles & Talks</h1>
 
-    <h3>“Navigating STEM Pathways and Academic Success”</h3>
-    <p>
-      <strong>Courtney-Grace Neizer</strong><br />
-      Invited Guest Speaker<br />
-      STEM Academic Research and Training (START) Program, Wake Technical Community College (2025)
-    </p>
+        <div class="talk">
+          <h3>BIGxCareer Panel Interview</h3>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/Rab_H9UPN3k" frameborder="0" allowfullscreen></iframe>
+          <p>
+            I got to co-host a conversation with two incredible PhDs—Dr. Markia Smith and Dr. Lesley Weaver—about navigating careers in academia and industry. 
+            We touched on everything from career pivots to mentorship, and it was a great chance to learn and share advice with others exploring their own paths.
+          </p>
+        </div>
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/Rab_H9UPN3k" frameborder="0" allowfullscreen></iframe>
-
-    <p>Assisted in interviewing Drs. Markia Smith and Lesley Weaver during the BIGxCareer panel discussion, focusing on career opportunities for PhDs as an early career student.</p>
-  </div>
-
-</body>
+        <!-- Placeholder for future videos -->
+        <div class="talk">
+          <h3>More Talks Coming Soon!</h3>
+          <p>Check back here for new talks and recordings I'll be adding throughout the year.</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
