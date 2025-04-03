@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fellowships and Awards</title>
+    <title>Fellowships & Awards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       body {
         margin: 0;
@@ -31,14 +35,15 @@
         height: 120px;
         margin-bottom: 10px;
       }
-      .sidebar h2,
-      .sidebar h3 {
+      .sidebar h2 {
         margin: 0;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: bold;
       }
       .sidebar h3 {
+        margin: 0;
         font-size: 14px;
+        font-weight: bold;
         margin-top: 5px;
         color: #4a4a4a;
       }
@@ -52,30 +57,44 @@
       .sidebar a:hover {
         text-decoration: underline;
       }
+      .social-icons {
+        margin-top: 15px;
+      }
+      .social-icons a {
+        display: block;
+        color: #4a4a4a;
+        font-size: 20px;
+        margin: 10px 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #8b5e3c;
+      }
       .content {
         flex: 1;
         padding: 30px;
       }
-      h1 {
-        text-align: center;
+      .content h1 {
         color: #8b5e3c;
+        text-align: left;
       }
       .card {
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 20px;
-        margin: 20px auto;
-        max-width: 600px;
+        margin: 20px 0;
+        max-width: 800px;
         background-color: #fff;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
       }
       .card h2 {
         font-size: 1.5em;
-        margin: 0;
+        margin: 0 0 10px 0;
         color: #8b5e3c;
       }
       .card p {
-        margin: 10px 0 0;
+        margin: 5px 0;
         line-height: 1.6;
       }
       .card span {
@@ -83,30 +102,23 @@
       }
       .content a {
         text-decoration: underline;
-        color: #d9a24e; /* Matches the hyperlink color in index.html */
+        color: #d9a24e;
       }
-      /* Footer Styles */
       .footer {
+        font-size: 14px;
+        color: #4a4a4a;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 30px;
-        font-size: 14px;
-        color: #4a4a4a;
-        background-color: #f9f5f2;
+        position: relative;
         margin-top: 50px;
+        padding: 0 30px;
+        width: 100%;
       }
-      .footer-left {
-        text-align: left;
-      }
-      .footer-right {
+      .contact-info {
+        font-size: 14px;
         text-align: right;
       }
-      .footer a {
-        color: black;
-        text-decoration: underline;
-      }
-      /* Responsive Design */
       @media screen and (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -114,17 +126,14 @@
         .sidebar {
           width: 100%;
           text-align: center;
+          height: auto;
         }
         .content {
           margin-left: 0;
         }
         .footer {
           flex-direction: column;
-          text-align: center;
-        }
-        .footer-left,
-        .footer-right {
-          margin: 5px 0;
+          padding: 20px;
         }
       }
     </style>
@@ -136,6 +145,26 @@
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
         <h3>Undergraduate Student at UNC Charlotte</h3>
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
+        <div class="social-icons">
+          <a href="https://github.com/courtneygraceneizer" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/courtney-graceneizer/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/thesteministblog/"
+            target="_blank"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
         <a href="index.html">Home</a>
         <a href="steministblog.html">The STEMinist Blog</a>
         <a href="publications.html">Publications</a>
@@ -145,49 +174,44 @@
 
       <!-- Content -->
       <div class="content">
-        <h1>Fellowships and Awards</h1>
+        <h1>Fellowships & Awards</h1>
 
-         <!-- Award 1 -->
+        <!-- Fulbright -->
         <div class="card">
           <h2>Fulbright Semifinalist</h2>
           <p><span>Amount:</span> N/A</p>
           <p><span>Date Awarded:</span> Winter 2025</p>
           <p>
-            Selected as a semifinalist for the Fulbright U.S. Student Program
-            following recommendation by the National Screening Committee. My 
-            application advanced to the host country for final review. 
-            Sponsered by the U.S. Department of State, the Fulbright 
-            Program supports students pursuing research, study, or teaching
-            aborad to foster meaningful cross-cultural exchange and global
-            understanding. Learn more about this grant at
-            <a href="https://us.fulbrightonline.org/about/fulbright-us-student-program" target="_blank">Fulbright U.S. Student Program</a>.
+            Selected as a semifinalist for the Fulbright U.S. Student Program after being recommended by the National Screening Committee. 
+            My application advanced to the host country for final review. The Fulbright Program, sponsored by the U.S. Department of State, 
+            supports students pursuing research, study, or teaching abroad. Learn more at 
+            <a href="https://us.fulbrightonline.org/about/fulbright-us-student-program" target="_blank">
+              Fulbright U.S. Student Program
+            </a>.
           </p>
         </div>
 
-        <!-- Award 2 -->
+        <!-- Black In Genetics -->
         <div class="card">
           <h2>Black In Genetics Fellowship Award</h2>
           <p><span>Amount:</span> $5,000</p>
           <p><span>Date Awarded:</span> Fall 2024</p>
           <p>
-            Awarded annually to one undergraduate and one graduate student,
-            recognizing outstanding contributions and potential in genetics. Learn
-            more about this fellowship at
+            Awarded to one undergraduate and one graduate student annually for excellence in genetics and commitment to equity in science. 
+            Learn more at 
             <a href="https://www.blackingenetics.com/about-us" target="_blank">Black In Genetics</a>.
           </p>
         </div>
 
-        <!-- Award 3 -->
+        <!-- Tapia -->
         <div class="card">
           <h2>ACM Tapia Conference Travel Award</h2>
           <p><span>Amount:</span> $1,400</p>
           <p><span>Date Awarded:</span> July 2024</p>
           <p>
-            Chosen as one of 10 graduate/undergraduate students from UNC Charlotte
-            to attend the ACM Tapia Diversity in Computing Conference in San Diego, CA.
-            Learn
-            more about this organization here,
-            <a href="https://tapiaconference.cmd-it.org/about/about24-tapia-conference/" target="_blank">Richard Tapia Celebration of Diversity in Computing</a>.
+            One of 10 students from UNC Charlotte selected to attend the Richard Tapia Celebration of Diversity in Computing Conference in San Diego, CA. 
+            Learn more about the program 
+            <a href="https://tapiaconference.cmd-it.org/about/about24-tapia-conference/" target="_blank">here</a>.
           </p>
         </div>
       </div>
@@ -195,12 +219,12 @@
 
     <!-- Footer -->
     <div class="footer">
-      <div class="footer-left">
-        <p>Last updated: January 2025</p>
-      </div>
-      <div class="footer-right">
+      <p>Last updated: January 2025</p>
+      <div class="contact-info">
         <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <p>GitHub: <a href="https://github.com/cgrezien" target="_blank">cgrezien</a></p>
+        <p>GitHub:
+          <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
+        </p>
       </div>
     </div>
   </body>
