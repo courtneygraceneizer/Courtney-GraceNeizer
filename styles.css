@@ -1,0 +1,23 @@
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.sidebar.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar.dark-mode a,
+.footer.dark-mode a {
+  color: #d9a24e;
+}
+
+.content.dark-mode a {
+  color: #f9d78c;
+}
+
+.footer.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
