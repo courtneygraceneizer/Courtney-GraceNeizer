@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles & Talks</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: #f9f5f2;
+      color: #4a4a4a;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fffdf9;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h3 {
+      color: #8b5e3c;
+    }
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+    iframe {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Articles & Talks</h1>
+    <p>Explore my invited talks, research presentations, and public speaking engagements.</p>
+
+    <h3>“Navigating STEM Pathways and Academic Success”</h3>
+    <p>
+      <strong>Courtney-Grace Neizer</strong><br />
+      Invited Guest Speaker<br />
+      STEM Academic Research and Training (START) Program, Wake Technical Community College (2025)
+    </p>
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/Rab_H9UPN3k" frameborder="0" allowfullscreen></iframe>
+
+    <p>Assisted in interviewing Drs. Markia Smith and Lesley Weaver during the BIGxCareer panel discussion, focusing on career opportunities for PhDs as an early career student.</p>
+  </div>
+
+</body>
+</html>
