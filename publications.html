@@ -1,207 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publications</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      body {
-        margin: 0;
-        font-family: "Times New Roman", serif;
-        background-color: #f9f5f2;
-        color: #4a4a4a;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: #f9f5f2;
+      color: #4a4a4a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      background-color: #d9c7b6;
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      flex-shrink: 0;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .sidebar h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+      color: #4a4a4a;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 15px 0;
+      color: #8b5e3c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .icon-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .icon-bar a {
+      font-size: 22px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-bar a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-bar .github { color: #000; }
+    .icon-bar .linkedin { color: #0A66C2; }
+    .icon-bar .instagram { color: #E1306C; }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      margin-left: 270px;
+    }
+
+    .content h1,
+    .content h2 {
+      color: #8b5e3c;
+    }
+
+    .content a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    details {
+      margin-bottom: 30px;
+    }
+
+    .centered-message {
+      width: 900px;
+      margin: 40px auto 0 auto;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
       .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
       .sidebar {
-        background-color: #d9c7b6;
-        width: 250px;
-        padding: 20px;
+        width: 100%;
         text-align: center;
-        flex-shrink: 0;
-        height: 100vh;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .sidebar img {
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-      }
-      .sidebar h2 {
-        margin: 0;
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .sidebar h3 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 5px;
-        color: #4a4a4a;
-      }
-      .sidebar a {
-        display: block;
-        margin: 15px 0;
-        color: #8b5e3c;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .sidebar a:hover {
-        text-decoration: underline;
-      }
-      .social-icons {
-        margin-top: 15px;
-      }
-      .social-icons a {
-        display: block;
-        color: #4a4a4a;
-        font-size: 20px;
-        margin: 10px 0;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      .social-icons a:hover {
-        color: #8b5e3c;
+        position: relative;
+        height: auto;
       }
       .content {
-        flex: 1;
-        padding: 30px;
-        text-align: left;
+        margin-left: 0;
       }
-      .content h1,
-      .content h2 {
-        color: #8b5e3c;
+      .icon-bar {
+        justify-content: center;
       }
-      .content a {
-        color: black;
-        text-decoration: underline;
-      }
-      details {
-        margin-bottom: 30px;
-      }
-      .footer {
-        font-size: 14px;
-        color: #4a4a4a;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        margin-top: 50px;
-        padding: 0 30px;
-        width: 100%;
-      }
-      .contact-info {
-        font-size: 14px;
-        text-align: right;
-      }
-      @media screen and (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-        .sidebar {
-          width: 100%;
-          text-align: center;
-          height: auto;
-        }
-        .content {
-          margin-left: 0;
-        }
-        .footer {
-          flex-direction: column;
-          padding: 20px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <img src="your-image.jpg" alt="Courtney-Grace" />
-        <h2>Courtney-Grace Neizer</h2>
-        <h3>Undergraduate Student at UNC Charlotte</h3>
-        <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <div class="social-icons">
-          <a href="https://github.com/courtneygraceneizer" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/courtney-graceneizer/"
-            target="_blank"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a
-            href="https://www.instagram.com/thesteministblog/"
-            target="_blank"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-        </div>
-        <a href="index.html">About Me</a>
-        <a href="steministblog.html">The STEMinist Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="articles.html">Articles & Talks</a>
-        <a href="fellowships.html">Fellowships & Awards</a>
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="your-image.jpg" alt="Courtney-Grace" />
+      <h2>Courtney-Grace Neizer</h2>
+      <h3>Undergraduate Student at UNC Charlotte</h3>
+      <p>cneizer [at] charlotte [dot] edu</p>
+
+      <!-- Horizontal social icons -->
+      <div class="icon-bar">
+        <a href="https://github.com/courtneygraceneizer" target="_blank" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/courtney-graceneizer/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/thesteministblog/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
       </div>
 
-      <!-- Content -->
-      <div class="content">
-        <h1>Recent Publications</h1>
+      <!-- Navigation -->
+      <a href="index.html">About Me</a>
+      <a href="steministblog.html">The STEMinist Blog</a>
+      <a href="publications.html">Publications</a>
+      <a href="articles.html">Articles & Talks</a>
+      <a href="fellowships.html">Fellowships & Awards</a>
+    </div>
 
-        <h2>First Author</h2>
+    <!-- Content -->
+    <div class="content">
+      <h1>Recent Publications</h1>
+
+      <h2>First Author</h2>
+      <p>
+        <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank">
+          "Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"
+        </a><br />
+        Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.  
+        <i>EUREKA! - Journal of Undergraduate Research, 2024</i>
+      </p>
+      <details>
+        <summary><b>Abstract (click to expand)</b></summary>
         <p>
-          <a href="https://www.waketech.edu/sites/default/files/page-file-uploads/Eureka-V5N1-Fall-2024.pdf#page15" target="_blank">
-            "Species Biodiversity Utilizing eDNA Analysis in Mill Branch Creek"
-          </a><br />
-          Neizer, Courtney-Grace; Dunoyer, Luc A.; Gibbs, Melinda.  
-          <i>EUREKA! - Journal of Undergraduate Research, 2024</i>
+          Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
+          environmental materials from different organisms. We use graph analysis to examine trends in species
+          diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
+          amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
+          of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
+          following this construction. The family and species number of Homo sapiens, often known as humans,
+          were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
+          fundamental local alignment search method that identifies areas of local sequence similarity. The most
+          common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
+          usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
+          laboratory analyses allowing further investigation of Mill Branch Creek in the future.
         </p>
-        <details>
-          <summary><b>Abstract (click to expand)</b></summary>
-          <p>
-            Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
-            environmental materials from different organisms. We use graph analysis to examine trends in species
-            diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
-            amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
-            of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
-            following this construction. The family and species number of Homo sapiens, often known as humans,
-            were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
-            fundamental local alignment search method that identifies areas of local sequence similarity. The most
-            common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
-            usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
-            laboratory analyses allowing further investigation of Mill Branch Creek in the future.
-          </p>
-        </details>
+      </details>
 
-        <!-- Placeholder for future publications -->
-        <h2>Coming Soon</h2>
-        <p>More research and writing projects are in the works—stay tuned for upcoming publications.</p>
+      <!-- Placeholder -->
+      <h2>Coming Soon</h2>
+      <p>More research and writing projects are in the works—stay tuned for upcoming publications.</p>
+
+      <!-- Footer-like update message -->
+      <div class="centered-message">
+        <p>Last update: April 2025</p>
       </div>
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <p>Last updated: January 2025</p>
-      <div class="contact-info">
-        <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <p>GitHub:
-          <a href="https://github.com/cgrezien" class="github-link">cgrezien</a>
-        </p>
-      </div>
-    </div>
-  </body>
+  </div>
+</body>
 </html>
+
 
 
 
