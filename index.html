@@ -11,35 +11,46 @@
     <style>
       body {
         margin: 0;
+        min-height: 100vh;
         font-family: "Times New Roman", serif;
         background-color: #f9f5f2;
         color: #4a4a4a;
+        display: flex;
+        flex-direction: column;
       }
+
       .container {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex: 1;
       }
+
       .sidebar {
         background-color: #d9c7b6;
         width: 250px;
         padding: 20px;
         text-align: center;
         flex-shrink: 0;
-        height: 100vh;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
+
       .sidebar img {
         border-radius: 50%;
         width: 120px;
         height: 120px;
         margin-bottom: 10px;
       }
+
       .sidebar h2 {
         margin: 0;
         font-size: 24px;
         font-weight: bold;
       }
+
       .sidebar h3 {
         margin: 0;
         font-size: 14px;
@@ -47,6 +58,7 @@
         margin-top: 5px;
         color: #4a4a4a;
       }
+
       .sidebar a {
         display: block;
         margin: 15px 0;
@@ -54,12 +66,15 @@
         text-decoration: none;
         font-weight: bold;
       }
+
       .sidebar a:hover {
         text-decoration: underline;
       }
+
       .social-icons {
         margin-top: 15px;
       }
+
       .social-icons a {
         display: block;
         color: #4a4a4a;
@@ -68,18 +83,23 @@
         text-decoration: none;
         transition: color 0.3s ease;
       }
+
       .social-icons a:hover {
         color: #8b5e3c;
       }
+
       .content {
         flex: 1;
         padding: 30px;
         text-align: justify;
+        margin-left: 270px;
       }
+
       .content a {
         text-decoration: underline;
         color: #d9a24e;
       }
+
       .animated-text {
         font-size: 2em;
         font-weight: bold;
@@ -87,6 +107,7 @@
         text-align: center;
         color: #000;
       }
+
       .cursor {
         display: inline-block;
         background-color: #000;
@@ -94,33 +115,37 @@
         height: 20px;
         animation: blink 0.7s steps(2, start) infinite;
       }
+
       @keyframes blink {
-        0%,
-        50% {
-          opacity: 1;
-        }
-        51%,
-        100% {
-          opacity: 0;
-        }
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
       }
+
       .footer {
         font-size: 14px;
         color: #4a4a4a;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        padding: 10px 30px;
         margin-top: 50px;
       }
+
+      .footer a, .github-link {
+        color: #4a4a4a;
+        text-decoration: underline;
+      }
+
       .centered-message {
         text-align: center;
         flex: 1;
         margin: 0 auto;
       }
+
       .contact-info {
         font-size: 14px;
       }
+
       @media screen and (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -128,43 +153,30 @@
         .sidebar {
           width: 100%;
           text-align: center;
+          position: relative;
+          height: auto;
         }
         .content {
           margin-left: 0;
         }
         .footer {
           flex-direction: column;
+          text-align: center;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Sidebar -->
       <div class="sidebar">
         <img src="your-image.jpg" alt="Courtney-Grace" />
         <h2>Courtney-Grace Neizer</h2>
         <h3>Undergraduate Student at UNC Charlotte</h3>
         <p>Email: cneizer [at] charlotte [dot] edu</p>
-        <!-- Social Icons -->
         <div class="social-icons">
-          <a href="https://github.com/courtneygraceneizer" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/courtney-graceneizer/"
-            target="_blank"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a
-            href="https://www.instagram.com/thesteministblog/"
-            target="_blank"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
+          <a href="https://github.com/courtneygraceneizer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/courtney-graceneizer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.instagram.com/thesteministblog/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
         <a href="index.html">About Me</a>
         <a href="steministblog.html">The STEMinist Blog</a>
@@ -173,42 +185,17 @@
         <a href="fellowships.html">Fellowships & Awards</a>
       </div>
 
-      <!-- Content -->
       <div class="content">
         <div class="animated-text">
           <span id="dynamicText"></span><span class="cursor"></span>
         </div>
+        <p>Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the University of North Carolina at Charlotte with a concentration in bioinformatics.</p>
+        <p>I am passionate about empowering others through technology and education. I run <a href="https://www.instagram.com/thesteministblog/" target="_blank"><b>The STEMinist Blog</b></a>, a platform for young girls and women in STEM, promoting cross-cultural exchanges and empowering young girls in STEM. With contributions from female-identifying Ph.D., medical, and undergraduate students in STEM, The STEMinist Blog offers science posts, career advice, and vlogs to support the next generation of women in science and technology.</p>
+        <p>I currently work in the Luo Lab (Bioinformatics) under Dr. Elaine Luo, in collaboration with Dr. Wenyu Gao (Statistics) to apply machine learning and statistical methods to microbial data analysis.</p>
+        <p>My research focuses on building predictive models to identify protein domain features linked to high Excess Atom Fraction (EAF) values, enhancing our understanding of microbial functions in carbon cycling. You can read more about my research <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0"><b>here</b></a>.</p>
 
-        <p>
-          Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the
-          University of North Carolina at Charlotte with a concentration in
-          bioinformatics.
-        </p>
-
-        <p>
-          I am passionate about empowering others through technology and education. I run
-          <a href="https://www.instagram.com/thesteministblog/" target="_blank"><b>The STEMinist Blog</b></a>,
-          a platform for young girls and women in STEM, promoting cross-cultural exchanges and empowering young girls in STEM.
-          With contributions from female-identifying Ph.D., medical, and undergraduate students in STEM, The STEMinist Blog
-          offers science posts, career advice, and vlogs to support the next generation of women in science and technology.
-        </p>
-
-        <p>
-          I currently work in the Luo Lab (Bioinformatics) under Dr. Elaine Luo, in collaboration with
-          Dr. Wenyu Gao (Statistics) to apply machine learning and statistical methods to microbial data analysis.
-        </p>
-
-        <p>
-          My research focuses on building predictive models to identify protein domain features linked to high
-          Excess Atom Fraction (EAF) values, enhancing our understanding of microbial functions in carbon cycling.
-          You can read more about my research
-          <a href="https://sites.google.com/uncc.edu/microbial-ecology-lab/people?authuser=0"><b>here</b></a>.
-        </p>
-
-        <!-- Projects Section Styled Like a Card -->
         <div style="max-width: 900px; margin: 60px auto 0 auto; background-color: #fffdf9; padding: 30px; border: 1px solid #d9c7b6; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.05);">
           <h2 style="color: #8b5e3c; text-align: center; margin-bottom: 20px;">Code, Create, Contribute</h2>
-
           <ul style="list-style-type: disc; padding-left: 20px;">
             <li style="margin-bottom: 30px;">
               <strong>February 2024 – Hack@Davidson II:</strong> I created a project called <em>TrashBots</em> with a teammate during a hackathon! We used AI image recognition to detect and report litter — aiming to empower local communities to take environmental action. Here's a short demo:
@@ -224,7 +211,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
       <p>Last updated: January 2025</p>
       <div class="centered-message">
