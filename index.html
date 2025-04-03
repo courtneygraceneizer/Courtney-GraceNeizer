@@ -125,7 +125,7 @@
         font-size: 14px;
         color: #4a4a4a;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         padding: 10px 30px;
         margin-top: 50px;
@@ -137,9 +137,9 @@
       }
 
       .centered-message {
+        width: 900px;
+        margin: 20px auto 0 auto;
         text-align: center;
-        flex: 1;
-        margin: 0 auto;
       }
 
       .contact-info {
@@ -189,6 +189,7 @@
         <div class="animated-text">
           <span id="dynamicText"></span><span class="cursor"></span>
         </div>
+
         <p>Hello! I’m Courtney-Grace, a fourth-year undergraduate student at the University of North Carolina at Charlotte with a concentration in bioinformatics.</p>
         <p>I am passionate about empowering others through technology and education. I run <a href="https://www.instagram.com/thesteministblog/" target="_blank"><b>The STEMinist Blog</b></a>, a platform for young girls and women in STEM, promoting cross-cultural exchanges and empowering young girls in STEM. With contributions from female-identifying Ph.D., medical, and undergraduate students in STEM, The STEMinist Blog offers science posts, career advice, and vlogs to support the next generation of women in science and technology.</p>
         <p>I currently work in the Luo Lab (Bioinformatics) under Dr. Elaine Luo, in collaboration with Dr. Wenyu Gao (Statistics) to apply machine learning and statistical methods to microbial data analysis.</p>
@@ -208,13 +209,20 @@
             </li>
           </ul>
         </div>
+
+        <!-- Centered message below content -->
+        <div class="centered-message">
+          <p>Last update: April 2025</p>
+        </div>
       </div>
     </div>
 
+    <!-- Footer with email only -->
     <div class="footer">
-      <div class="centered-message">
-                            <p>Last update: April 2025</p>
+      <div class="contact-info">
+        <p>Email: cneizer [at] charlotte [dot] edu</p>
       </div>
+    </div>
 
     <script>
       const phrases = ["Welcome to my website!", "Hello there!"];
@@ -241,6 +249,7 @@
     </script>
   </body>
 </html>
+
 
 
 
