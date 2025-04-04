@@ -17,12 +17,6 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body.dark-mode {
-      background-color: #1e1e1e;
-      color: #f0f0f0;
     }
 
     .container {
@@ -42,11 +36,6 @@
       left: 0;
       bottom: 0;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
-    }
-
-    body.dark-mode .sidebar {
-      background-color: #2b2b2b;
     }
 
     .sidebar img {
@@ -68,10 +57,6 @@
       font-weight: bold;
       margin-top: 5px;
       color: #4a4a4a;
-    }
-
-    body.dark-mode .sidebar h3 {
-      color: #ccc;
     }
 
     .sidebar a {
@@ -107,55 +92,6 @@
     .icon-bar .linkedin { color: #0A66C2; }
     .icon-bar .instagram { color: #E1306C; }
 
-    .toggle-container {
-      margin-top: 10px;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 35px;
-      height: 18px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      transition: 0.4s;
-      border-radius: 18px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 12px;
-      width: 12px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-
-    .switch input:checked + .slider {
-      background-color: #4a4a4a;
-    }
-
-    .switch input:checked + .slider:before {
-      transform: translateX(17px);
-    }
-
     .content {
       flex: 1;
       padding: 30px;
@@ -167,18 +103,9 @@
       color: #8b5e3c;
     }
 
-    body.dark-mode .content h1,
-    body.dark-mode .content h2 {
-      color: #f9c87c;
-    }
-
     .content a {
       color: black;
       text-decoration: underline;
-    }
-
-    body.dark-mode .content a {
-      color: #ffd87c;
     }
 
     details {
@@ -227,14 +154,6 @@
         <a href="https://www.instagram.com/thesteministblog/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
       </div>
 
-      <!-- Dark mode toggle -->
-      <div class="toggle-container">
-        <label class="switch">
-          <input type="checkbox" id="darkModeToggle" />
-          <span class="slider"></span>
-        </label>
-      </div>
-
       <!-- Navigation -->
       <a href="index.html">About Me</a>
       <a href="steministblog.html">The STEMinist Blog</a>
@@ -261,7 +180,14 @@
           Environmental DNA (eDNA) is defined as a distinctive mashup of genomic DNA found in a variety of
           environmental materials from different organisms. We use graph analysis to examine trends in species
           diversity based on environmental DNA analysis, using four sets of organism primers (fish, organism,
-          amphibians, and plants)...
+          amphibians, and plants). Wildlife residing close to Wake Tech's campus is impacted by the construction
+          of Highway 540. The current eDNA study assessed the species diversity existing in Mill Branch Creek
+          following this construction. The family and species number of Homo sapiens, often known as humans,
+          were among the most frequently discovered in Mill Branch Creek. Identified through BLAST, a
+          fundamental local alignment search method that identifies areas of local sequence similarity. The most
+          common species of bacteria found was Pseudomonas gessardi, a highly harmful bacterial species,
+          usually present in meat. Additional eDNA samples collected were stored in a deep freezer for downstream
+          laboratory analyses allowing further investigation of Mill Branch Creek in the future.
         </p>
       </details>
 
@@ -275,18 +201,8 @@
       </div>
     </div>
   </div>
-
-  <script>
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('change', function () {
-      document.body.classList.toggle('dark-mode', this.checked);
-    });
-  </script>
 </body>
 </html>
-
-
-
 
 
 
