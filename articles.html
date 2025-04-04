@@ -14,6 +14,12 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
     }
 
     .container {
@@ -33,6 +39,11 @@
       left: 0;
       bottom: 0;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    body.dark-mode .sidebar {
+      background-color: #2b2b2b;
     }
 
     .sidebar img {
@@ -54,6 +65,10 @@
       font-weight: bold;
       margin-top: 5px;
       color: #4a4a4a;
+    }
+
+    body.dark-mode .sidebar h3 {
+      color: #ccc;
     }
 
     .sidebar a {
@@ -88,6 +103,55 @@
     .icon-bar .github { color: #000; }
     .icon-bar .linkedin { color: #0A66C2; }
     .icon-bar .instagram { color: #E1306C; }
+
+    .toggle-container {
+      margin-top: 10px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 35px;
+      height: 18px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 18px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 12px;
+      width: 12px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    .switch input:checked + .slider {
+      background-color: #4a4a4a;
+    }
+
+    .switch input:checked + .slider:before {
+      transform: translateX(17px);
+    }
 
     .content {
       flex: 1;
@@ -142,21 +206,25 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
     <div class="sidebar">
       <img src="your-image.jpg" alt="Courtney-Grace" />
       <h2>Courtney-Grace Neizer</h2>
       <h3>Undergraduate Student at UNC Charlotte</h3>
       <p>cneizer [at] charlotte [dot] edu</p>
 
-      <!-- Icon Bar -->
       <div class="icon-bar">
         <a href="https://github.com/courtneygraceneizer" target="_blank" class="github"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/courtney-graceneizer/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/thesteministblog/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
       </div>
 
-      <!-- Navigation -->
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
       <a href="index.html">About Me</a>
       <a href="steministblog.html">The STEMinist Blog</a>
       <a href="publications.html">Publications</a>
@@ -164,10 +232,10 @@
       <a href="fellowships.html">Fellowships & Awards</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
       <h1>Articles & Talks</h1>
 
+      <!-- Talk Sections (unchanged) -->
       <div class="talk">
         <h3>Undergraduate Research Journal Podcast: Hispanic Heritage Month (2024)</h3>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/7TpU1DTNshw" frameborder="0" allowfullscreen></iframe>
@@ -211,6 +279,18 @@
       </div>
     </div>
   </div>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode', this.checked);
+      localStorage.setItem('darkMode', this.checked);
+    });
+  </script>
 </body>
 </html>
 
