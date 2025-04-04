@@ -324,8 +324,20 @@
 
   <script>
     const toggle = document.getElementById('darkModeToggle');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+
     toggle.addEventListener('change', function () {
-      document.body.classList.toggle('dark-mode', this.checked);
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
     });
 
     const phrases = ["Hello there! (:", "Welcome to my website!"];
@@ -352,8 +364,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 
